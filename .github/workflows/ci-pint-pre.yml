@@ -1,4 +1,4 @@
-name: CI
+name: CI-pint-pre
 
 on: [push, pull_request]
 
@@ -40,6 +40,11 @@ jobs:
           key: pip-${{ matrix.python-version }}
           restore-keys: |
             pip-${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          pip install pytest packaging
+          pip install .
 
       - name: Run Tests
         run: |

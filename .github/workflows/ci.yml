@@ -41,6 +41,11 @@ jobs:
           restore-keys: |
             pip-${{ matrix.python-version }}
 
+      - name: Install dependencies
+        run: |
+          pip install pytest packaging
+          pip install .
+
       - name: Run Tests
         run: |
           pytest $TEST_OPTS
