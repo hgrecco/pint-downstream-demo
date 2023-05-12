@@ -1,5 +1,5 @@
 [project]
-name = "Pint Downstream Demo"
+name = "pint-downstream-demo"
 authors = [
   {name="Hernan E. Grecco", email="hernan.grecco@gmail.com"}
 ]
